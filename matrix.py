@@ -4,10 +4,6 @@ def transpose(matrix):
 def powers(input_list, lower_limit, upper_limit):
     return [[i**j for j in range(lower_limit, upper_limit+1)] for i in input_list]
 
-def powers(input_list, lower_limit, upper_limit):
-    return [[i**j for j in range(lower_limit, upper_limit+1)] for i in input_list]
-
-
 def matmul(matrixa, matrixb):
     output=[]
     if len(matrixa[0])== len(matrixb):
