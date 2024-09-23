@@ -4,6 +4,10 @@ def transpose(matrix):
 def powers(input_list, lower_limit, upper_limit):
     return [[i**j for j in range(lower_limit, upper_limit+1)] for i in input_list]
 
+def loadtxt(file_path):
+    with open(f"given_stuff/{file_path}") as file:
+        return [[value.rstrip("\n") for value in line.split("\t")] for line in file]
+
 def matmul(matrixa, matrixb):
     output=[]
     if len(matrixa[0])== len(matrixb):
