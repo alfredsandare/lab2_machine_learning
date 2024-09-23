@@ -28,3 +28,19 @@ def matmul(matrixa, matrixb):
                     output[row_id][column_id]+=itema*itemb
                       
     return(output)
+
+def invert(matrix):
+    det = (matrix[0][0]*matrix[1][1])-(matrix[0][1]*matrix[1][0])
+    print(det)
+    output=[[0,0],[0,0]]
+    for i, li in enumerate(matrix):
+        for n, item in enumerate(li):
+            if n!=i:
+                item = item*-1
+            item=item/det
+            if i==0:
+                output[n-1][1]=item
+            else:
+                output[n-1][0]=item
+   
+    return output
