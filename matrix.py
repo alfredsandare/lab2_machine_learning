@@ -1,4 +1,6 @@
 def transpose(matrix):
+    if len(matrix) == 0:
+        return []
     return [[row[j] for row in matrix] for j in range(len(matrix[0]))]
 
 def powers(input_list, lower_limit, upper_limit):
@@ -9,6 +11,8 @@ def loadtxt(file_path):
         return [[value.rstrip("\n") for value in line.split("\t")] for line in file]
 
 def matmul(matrixa, matrixb):
+    if len(matrixa) == 0 or len(matrixb) == 0:
+        return []
     output=[]
     first_matrix, second_matrix = matrixb, matrixa
     if len(matrixa[0]) == len(matrixb):
