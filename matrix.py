@@ -8,7 +8,7 @@ def powers(input_list, lower_limit, upper_limit):
 
 def loadtxt(file_path):
     with open(file_path) as file:
-        return [[float(value.rstrip("\n")) for value in line.split("\t")] for line in file]
+        return [[float(value.rstrip("\n")) for value in line.split()] for line in file]
 
 def matmul(matrixa, matrixb):
     if len(matrixa) == 0 or len(matrixb) == 0:
