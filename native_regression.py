@@ -7,8 +7,6 @@ Xp= powers(x,0,1)
 Yp= powers(y,1,1)
 Xpt = transpose(Xp)
 [[b],[m]]=matmul(invert(matmul(Xpt,Xp)),matmul(Xpt,Yp))
-print(b)
-print(m)
 y2=[]
 for temperature in x:
     y2.append((b + m * temperature))
