@@ -16,11 +16,11 @@ Xpt = transpose(Xp)
 a = matmul(linalg.inv(matmul(Xpt,Xp)), matmul(Xpt,Yp))
 a = a[:,0]
 
-y2=[]
-x2=linspace(min(x), max(x), 1000)
+y2 = []
+x2 = linspace(min(x), max(x), 1000)
 for val in x2:
-    y2.append(poly(a,val))
+    y2.append(poly(a, val))
 
-plt.plot(x,y,'ro')
-plt.plot(x2,y2)
+plt.plot(x, y, 'ro')
+plt.plot(x2, y2)
 plt.show()

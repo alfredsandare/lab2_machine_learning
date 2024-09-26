@@ -13,7 +13,7 @@ def loadtxt(file_path):
 def matmul(matrixa, matrixb):
     if len(matrixa) == 0 or len(matrixb) == 0:
         return []
-    output=[]
+    output = []
     first_matrix, second_matrix = matrixb, matrixa
     if len(matrixa[0]) == len(matrixb):
         first_matrix, second_matrix = matrixa, matrixb
@@ -22,23 +22,23 @@ def matmul(matrixa, matrixb):
         output.append([])
         for i,itema in enumerate(alist):
             for column_id, itemb in enumerate(second_matrix[i]):
-                if i == 0:
+                if i==0:
                     output[row_id].append(0)
-                output[row_id][column_id]+=itema*itemb
+                output[row_id][column_id] += itema*itemb
 
     return output
 
 def invert(matrix):
     det = (matrix[0][0]*matrix[1][1])-(matrix[0][1]*matrix[1][0])
-    output=[[0,0],[0,0]]
+    output = [[0,0], [0,0]]
     for i, li in enumerate(matrix):
         for n, item in enumerate(li):
             if n!=i:
-                item = item*-1
-            item=item/det
+                item = -1 * item
+            item = item/det
             if i==0:
-                output[n-1][1]=item
+                output[n-1][1] = item
             else:
-                output[n-1][0]=item
+                output[n-1][0] = item
    
     return output
